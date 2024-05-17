@@ -12,45 +12,64 @@ n %= 3600
 minutes = n // 60
 n %= 60
 
-print("{:1d}:{:1d}:{:1d}".format())
+print("{:1d}:{:1d}:{:1d}".format(hour, minutes, n))
+
 '''
+#O format estava vazio, coloquei as variáveis hour, minutes, n dentro do parênteses.
+
+
 '''
-'Questão 2'
+#'Questão 2'
 # Faça um programa que calcule a tabuada
 n = int(input('Digite um número: '))
 
 for  i in range(1,11):
-    pint('{} x {} = {}'.format()
+    print('{} x {} = {}'.format(i,n, i*n))
+
 '''
+#Correção da palavra print, acrescentei o último parênteses, e adicionei as variáveis no format.
+
 
 '''
 'Questão 3'
-# Faça um programa que calcule a média ponderada  de três notas, sabendo que cada nota possui seu peso
+# Faça um programa que calcule a média ponderada de três notas, sabendo que cada nota possui seu peso
+
+a = float(input('Primeira nota: '))
+b = float(input('Segunda nota: '))
+c = float(input('Terceira nota: '))
 
 media = ((a*2) + (b*3) + (c*5))/10
 
 print('MEDIA = {:.1f}'.format(media))
 '''
+#Acrescentei e defini as variáveis no input.
+
 '''
 'Questão 4'
-# Calcule o salário  do trabalhador.
+# Calcule o salário do trabalhador.
 hours = int(input())
 value = float(input())
 
-salary = hours * vaIue
+salary = hours * value
 
 print('Salario = U$ {:.2f}'.format(salary))
+
 '''
+#a varíavel value estava escrita errada.
+
+
 '''
 'Questão 5'
 # Calcule o volume da esfera
-radiu = float(input())
+radius = float(input())
 pi = 3.14159
 
-voIume = (4/3) * pi * radius**3
+volume = (4/3) * pi * radius**3
 
 print('VOLUME = {:.3f}'.format(volume))
 '''
+#As variáveis volume e radius estavam escritas erradas.
+
 '''
 'Questão 6'
 # Dica: o único erro desta questão está no "if clause".
@@ -59,7 +78,7 @@ a, b, c = map(int, input().split())
 
 if a > b:
     maior = a
-if:
+if a < b:
     maior = b
 
 if c > maior:
@@ -68,6 +87,8 @@ if c > maior:
 # Printing the result
 print(maior, "É o maior")
 '''
+#No segundo if estava faltando o a < b
+
 '''
 'Questão 7'
 """Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75], (75,100])
@@ -81,16 +102,18 @@ a = float(input())
 
 if a < 0 or a > 100:
     print('Fora de intervalo')  
-if a >= 0 and  a <= 25:
+elif a >= 0 and  a <= 25:
     print('Intervalo [0,25]')
-if a > 25 and a <= 50:
+elif a > 25 and a <= 50:
     print('Intervalo (25,50]')
-if a > 50 and a <= 75:
+elif a > 50 and a <= 75:
     print('Intervalo [50,75]')
-if a > 75 and a <= 100:
+else:
     print('Intervalo (75,100]')
 
 '''
+#Não tinha erros no código, apenas alterei os if para elif e else
+
 '''
 'Questão 8'
 # Faça um programa que, verifica os números digitados em uma quantidade de vezes definida pelo usuário.
@@ -99,28 +122,33 @@ n = int(input())
 for i in range (0,n):
     i = int(input())
     if i > 0:
-        if i%2 = 0:
+        if i%2 == 0:
             print('Par Positivo')
         else:
             print('Ímpar Positivo')
     elif i < 0:
-        if i%2 = 0:
+        if i%2 == 0:
             print('Par Negativo')
         else:
             print('Ímpar Negativo')
     else:
         print('NULL')
 '''
+#No if estava =, o correto é == .
+
+
 '''
 'Questão 9'
-# Calcule o produto de  dois números inteiros fornecidos pelo usuário.
-a = float(input())
-b = float(input())
+# Calcule o produto de dois números inteiros fornecidos pelo usuário.
+a = int(input())
+b = int(input())
 
-prod = a + b
+prod = a * b
 
 print('Produto =',prod)
 '''
+#Coloquei int para definir que as variáveis a b são inteiras, e a variavel prod estava a + b, o produto seria a*b.
+
 '''
 'Questão 10'
 # Calcule a diferença entre A * B e C * D
@@ -128,6 +156,8 @@ a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
+diff = (a*b)-(c*d)
 
 print('Diferença =', diff)
 '''
+#Estava faltando a definição da variável diff
