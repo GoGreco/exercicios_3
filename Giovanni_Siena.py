@@ -2,7 +2,7 @@
 Lembre-se, não é por que o código funciona, que ele está correto, preste atenção nisso """
 
 
-'''
+
 'Questão 1'
 # Calcule as horas, minutos e segundos e posteriormente, printe os valores na tela.
 n = int(input())
@@ -12,46 +12,53 @@ n %= 3600
 minutes = n // 60
 n %= 60
 
-print("{:1d}:{:1d}:{:1d}".format())
-'''
-'''
+print("{:1d}:{:1d}:{:1d}".format(hour, minutes, n))
+
+# A alteração foi no .format, adicionando as variáveis hour, minutes e n para serem representadas nas chaves
+
 'Questão 2'
 # Faça um programa que calcule a tabuada
 n = int(input('Digite um número: '))
 
 for  i in range(1,11):
-    pint('{} x {} = {}'.format()
-'''
+    print('{} x {} = {}'.format(n,i, n*i))
 
-'''
+#  As alterações foram o erro de escrita no print, que estava escrito "pint", além da adição das variáveis n, i e n*i no .format
+
 'Questão 3'
 # Faça um programa que calcule a média ponderada  de três notas, sabendo que cada nota possui seu peso
+a = float(input("Digite a primeira nota: "))
+b = float(input("Digite a segunda nota: "))
+c = float(input("Digite a terceira nota: "))
 
 media = ((a*2) + (b*3) + (c*5))/10
 
 print('MEDIA = {:.1f}'.format(media))
-'''
-'''
+
+# A alteração foi a inserção de três inputs pra cada varíável, a, b e c
+
 'Questão 4'
 # Calcule o salário  do trabalhador.
 hours = int(input())
 value = float(input())
 
-salary = hours * vaIue
+salary = hours * value
 
 print('Salario = U$ {:.2f}'.format(salary))
-'''
-'''
+
+#  A alteração foi na variável value na linha 46, estava escrito vaIue, com um i maiúsculo ao invés de um L
+
 'Questão 5'
 # Calcule o volume da esfera
-radiu = float(input())
+radius = float(input())
 pi = 3.14159
 
-voIume = (4/3) * pi * radius**3
+volume = (4/3) * pi * radius**3
 
 print('VOLUME = {:.3f}'.format(volume))
-'''
-'''
+
+# A alteração foi na variável radius, que estava incoerente, sendo uma "radiu" e a outra "radius"
+
 'Questão 6'
 # Dica: o único erro desta questão está no "if clause".
 a, b, c = map(int, input().split())
@@ -59,7 +66,7 @@ a, b, c = map(int, input().split())
 
 if a > b:
     maior = a
-if:
+if b > a:
     maior = b
 
 if c > maior:
@@ -67,8 +74,9 @@ if c > maior:
 
 # Printing the result
 print(maior, "É o maior")
-'''
-'''
+
+#  A alteração foi no segundo if, no qual faltava inserir a opção onde b > a
+
 'Questão 7'
 """Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos seguintes intervalos ([0,25], (25,50], (50,75], (75,100])
 este valor se encontra. Obviamente se o valor não estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
@@ -89,45 +97,49 @@ if a > 50 and a <= 75:
     print('Intervalo [50,75]')
 if a > 75 and a <= 100:
     print('Intervalo (75,100]')
+    
+#  Não há erro na questão 7
 
-'''
-'''
 'Questão 8'
 # Faça um programa que, verifica os números digitados em uma quantidade de vezes definida pelo usuário.
 # A verificação vai dizer se ele é par, ímpar, positivo, negativo ou Nulo
 n = int(input())
-for i in range (0,n):
+for i in range (0, n):
     i = int(input())
     if i > 0:
-        if i%2 = 0:
+        if i%2 == 0:
             print('Par Positivo')
         else:
             print('Ímpar Positivo')
     elif i < 0:
-        if i%2 = 0:
+        if i%2 == 0:
             print('Par Negativo')
         else:
             print('Ímpar Negativo')
     else:
         print('NULL')
-'''
-'''
+        
+#  A alteração foi nos símbolos de igual, na linha 110 e 115, que precisavam de mais um "=="
+
 'Questão 9'
 # Calcule o produto de  dois números inteiros fornecidos pelo usuário.
 a = float(input())
 b = float(input())
 
-prod = a + b
+prod = a * b
 
 print('Produto =',prod)
-'''
-'''
+
+# A alteração foi no sinal do cálculo, que era um sinal de soma
+
 'Questão 10'
 # Calcule a diferença entre A * B e C * D
 a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
+diff = (a*b)-(c*d)
 
 print('Diferença =', diff)
-'''
+
+# A alteração foi a inserção da variável diff, que realiza o a diferença dos produtos entre AB e CD
